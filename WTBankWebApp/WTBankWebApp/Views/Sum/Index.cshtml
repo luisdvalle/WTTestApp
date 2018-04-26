@@ -1,0 +1,26 @@
+﻿@model SumRomanViewModel
+
+<h2>Sum Roman Numerals Service</h2>
+
+<p>This service adds two Roman Numerals and return the sum in Roman Numeral format</p>
+
+<form asp-action="Add" asp-controller="Sum" method="post">
+    <div>
+        <label>Enter first Roman Numeral:</label>
+        <input asp-for="RomanNumeral1" />
+    </div>
+
+    <div>
+        <label>Enter second Roman Numeral:</label>
+        <input asp-for="RomanNumeral2" />
+    </div>
+
+    <div>
+        <input type="submit" value="Sum" />
+    </div>
+</form>
+
+<p>The sum of the Roman Numerals above is:</p>
+
+<p>@Model.SumRomanNumerals</p>
+

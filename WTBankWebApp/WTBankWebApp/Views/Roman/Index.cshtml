@@ -1,0 +1,20 @@
+﻿@model RomanNumeralViewModel
+
+<h2>Roman Numerals Service</h2>
+
+<p>This service converts a numeric value to his Roman Numeral equivalent</p>
+
+<form asp-action="Convert" asp-controller="Roman" method="post">
+    <div>
+        <label>Enter your numeric value:</label>
+        <input asp-for="NumericValue" />
+    </div>
+
+    <div>
+        <input type="submit" value="Convert" />
+    </div>
+</form>
+
+<p>The Roman Numeral equivalent to this numeric value is:</p>
+
+<p>@Model.RomanNumeralValue</p>

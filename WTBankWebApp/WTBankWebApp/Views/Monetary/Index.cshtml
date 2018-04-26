@@ -1,0 +1,20 @@
+﻿@model MonetaryFigureViewModel
+
+<h2>Monetary Service</h2>
+
+<p>This service converts a numerical monetary value in dollars and cents and produces its Engligh equivalent</p>
+
+<form asp-action="Convert" asp-controller="Monetary" method="post">
+    <div>
+        <label>Enter your monetary value: $</label>
+        <input asp-for="NumericValue" />
+    </div>
+
+    <div>
+        <input type="submit" value="Convert" />
+    </div>
+</form>
+
+<p>English equivalent to numeric value entered:</p>
+
+<p>@Model.EnglishTextValue</p>
